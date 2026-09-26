@@ -22,7 +22,6 @@ function walk(widget, predicate) {
     return null;
 }
 app.connect('activate', () => {
-    Gtk.Settings.get_default().gtk_enable_animations = false;
     const settings = new Gio.Settings({schema_id: 'org.gnome.shell.extensions.network-drives'});
     const window = new Adw.PreferencesWindow({application: app});
     settings.set_boolean('add-requested', true);
@@ -36,7 +35,7 @@ app.connect('activate', () => {
             if (GLib.getenv('LANGUAGE') === 'ja' && dialog.title !== 'ネットワークドライブを追加') throw new Error('Japanese dialog title missing');
             const save = walk(dialog, w => w instanceof Gtk.Button && w.label === _('Save'));
             const [positioned, bounds] = save.compute_bounds(dialog);
-            if (!positioned || bounds.get_y() < 0 || bounds.get_y() + bounds.get_height() > dialog.get_height()) throw new Error(`Save button is clipped: positioned=${positioned}, y=${bounds?.get_y()}, height=${bounds?.get_height()}, dialog=${dialog.get_height()}`);
+            if (!positioned || bounds.get_y() < 0 || bounds.get_y() + bounds.get_height() > dialog.get_height()) throw new Error('Save button is clipped');
             let parent = save.get_parent();
             while (parent && parent !== dialog) {
                 if (parent instanceof Gtk.ScrolledWindow) throw new Error('Save button must not scroll with the form');
@@ -56,7 +55,7 @@ app.connect('activate', () => {
             const {drives, error} = deserialize(settings.get_string('drives'));
             if (error || drives.length !== 1 || drives[0].name !== 'Smoke NAS') throw new Error('Save failed');
             print('Preferences: fixed Save visibility, validation, expandable options, add/save and GSettings roundtrip passed');
-        } catch (e) { printerr(`${e.message}\n${e.stack}`); failed = true; }
+      } catch (e) { printerr(e.stack); failed = true; }
         window.close();
         app.quit();
         return GLib.SOURCE_REMOVE;
