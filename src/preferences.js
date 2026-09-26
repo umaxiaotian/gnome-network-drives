@@ -1,4 +1,5 @@
 import {gettext as _} from './i18n.js';
+import {driveIcon} from './icons.js';
 import Adw from 'gi://Adw?version=1';
 import Gtk from 'gi://Gtk?version=4.0';
 import {DriveSettings} from './settings.js';
@@ -11,6 +12,15 @@ export function fillPreferences(window, settings) {
     window.set_default_size(760, 760);
     const page = new Adw.PreferencesPage({title: _('Network Drives'), icon_name: 'folder-remote-symbolic'});
     window.add(page);
+    const identity = new Adw.PreferencesGroup();
+    const branding = new Gtk.Box({orientation: Gtk.Orientation.VERTICAL, spacing: 8,
+        margin_top: 12, margin_bottom: 12});
+    branding.append(new Gtk.Image({gicon: driveIcon(), pixel_size: 72}));
+    const title = new Gtk.Label({label: _('Network Drives')});
+    title.add_css_class('title-2');
+    branding.append(title);
+    identity.add(branding);
+    page.add(identity);
     let group;
     let editor = null;
     const toast = message => window.add_toast(new Adw.Toast({title: message}));
@@ -153,5 +163,13 @@ export function fillPreferences(window, settings) {
         return false;
     });
     rebuild();
-    addRequested();
+    // Present the editor only after the parent has a usable allocation.
+    if (window.get_mapped()) {
+        addRequested();
+    } else {
+        const mapped = window.connect('map', () => {
+            window.disconnect(mapped);
+            addRequested();
+        });
+    }
 }

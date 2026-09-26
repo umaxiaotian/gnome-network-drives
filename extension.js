@@ -1,4 +1,5 @@
 import {gettext as _} from './src/i18n.js';
+import {driveIcon} from './src/icons.js';
 import St from 'gi://St';
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
@@ -13,7 +14,7 @@ export default class NetworkDrivesExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
         this._indicator = new PanelMenu.Button(0.0, _('Network Drives'));
-        this._indicator.add_child(new St.Icon({icon_name: 'folder-remote-symbolic', style_class: 'system-status-icon'}));
+        this._indicator.add_child(new St.Icon({gicon: driveIcon(true), style_class: 'system-status-icon'}));
         Main.panel.addToStatusArea(this.uuid, this._indicator);
         this._manager = new DriveManager(this._settings, () => this._render(), (title, body) => Main.notify(title, body), {MountManager, NetworkMonitor});
         this._render();
