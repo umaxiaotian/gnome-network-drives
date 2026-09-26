@@ -1,0 +1,12 @@
+<schemalist>
+  <schema id="org.gnome.shell.extensions.network-drives" path="/org/gnome/shell/extensions/network-drives/">
+    <key name="drives" type="s">
+      <default>'{"version":1,"drives":[]}'</default>
+      <summary>Versioned drive definitions (no passwords)</summary>
+    </key>
+    <key name="add-requested" type="b">
+      <default>false</default>
+      <summary>Open the add drive editor on the next preferences launch</summary>
+    </key>
+  </schema>
+</schemalist>

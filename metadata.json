@@ -1,0 +1,12 @@
+{
+  "uuid": "network-drives@umaxiaotian",
+  "name": "Network Drives",
+  "description": "Map and manage network drives directly from GNOME Shell.",
+  "shell-version": [
+    "50"
+  ],
+  "version": 1,
+  "settings-schema": "org.gnome.shell.extensions.network-drives",
+  "url": "https://github.com/umaxiaotian/gnome-network-drives",
+  "gettext-domain": "network-drives"
+}
