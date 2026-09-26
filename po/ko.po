@@ -1,0 +1,223 @@
+# Korean translations for network-drives.
+# Copyright (C) 2026 umaxiaotian
+# This file is distributed under the same license as the network-drives
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-drives 1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-09-27 00:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+msgid "Network Drives"
+msgstr "네트워크 드라이브"
+
+msgid "Drives"
+msgstr "드라이브"
+
+msgid "Connect to shared folders on your network."
+msgstr "네트워크의 공유 폴더에 연결합니다."
+
+msgid "Connect automatically"
+msgstr "자동으로 연결"
+
+msgid "Add Network Drive"
+msgstr "네트워크 드라이브 추가"
+
+msgid "Edit Network Drive"
+msgstr "네트워크 드라이브 편집"
+
+msgid "General"
+msgstr "일반"
+
+msgid "Connection"
+msgstr "연결"
+
+msgid "Options"
+msgstr "옵션"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Protocol"
+msgstr "연결 방식"
+
+msgid "Server"
+msgstr "서버"
+
+msgid "Share"
+msgstr "공유 이름"
+
+msgid "Port (optional)"
+msgstr "포트 (선택 사항)"
+
+msgid "Path"
+msgstr "경로"
+
+msgid "Username (optional)"
+msgstr "사용자 이름 (선택 사항)"
+
+msgid "Domain (optional)"
+msgstr "도메인 (선택 사항)"
+
+msgid "Reconnect when network becomes available"
+msgstr "네트워크가 복구되면 다시 연결"
+
+msgid ""
+"Passwords are requested when connecting and can be remembered by GNOME. "
+"Disconnecting a shared connection also affects Files and other saved "
+"drives using it."
+msgstr ""
+"연결할 때 암호를 입력하며 GNOME에 저장할 수 있습니다. 연결을 끊으면 이 연결을 사용하는 파일 앱과 다른 드라이브에도 영향을 "
+"줍니다."
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Port must be a number between 1 and 65535."
+msgstr "포트는 1에서 65535 사이의 정수로 입력하세요."
+
+msgid "This drive was deleted. Close this editor and add a new drive."
+msgstr "이 드라이브는 삭제되었습니다. 편집 화면을 닫고 새 드라이브를 추가하세요."
+
+msgid "Delete Network Drive"
+msgstr "네트워크 드라이브 삭제"
+
+msgid "Delete Network Drive?"
+msgstr "네트워크 드라이브를 삭제하시겠습니까?"
+
+#, python-format
+msgid ""
+"Remove “%s” from your saved drives? Its files and current connection will"
+" be kept."
+msgstr "저장된 드라이브에서 “%s”을(를) 삭제하시겠습니까? 파일과 현재 연결은 유지됩니다."
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Saved drives could not be read. Open settings."
+msgstr "저장된 드라이브를 읽을 수 없습니다. 설정을 여세요."
+
+msgid "No network drives yet"
+msgstr "아직 네트워크 드라이브가 없습니다"
+
+msgid "Open in Files"
+msgstr "파일 앱에서 열기"
+
+msgid "Disconnect"
+msgstr "연결 끊기"
+
+msgid "Connect"
+msgstr "연결"
+
+msgid "Manage Network Drives"
+msgstr "네트워크 드라이브 관리"
+
+msgid "Connected"
+msgstr "연결됨"
+
+msgid "Disconnected"
+msgstr "연결되지 않음"
+
+msgid "Connecting…"
+msgstr "연결 중…"
+
+msgid "Connection failed"
+msgstr "연결 실패"
+
+msgid "Invalid drive definition."
+msgstr "드라이브 설정이 올바르지 않습니다."
+
+msgid "Invalid drive ID."
+msgstr "드라이브 ID가 올바르지 않습니다."
+
+msgid "Enter a name (up to 120 characters)."
+msgstr "이름을 120자 이내로 입력하세요."
+
+msgid "Choose a supported protocol."
+msgstr "지원되는 연결 방식을 선택하세요."
+
+msgid "Enter a hostname or IPv4/IPv6 address, without a URL or path."
+msgstr "URL이나 경로 없이 호스트 이름 또는 IPv4/IPv6 주소를 입력하세요."
+
+msgid "Enter a share name without slashes."
+msgstr "슬래시 없이 공유 이름을 입력하세요."
+
+msgid "Invalid field value."
+msgstr "입력값이 올바르지 않습니다."
+
+msgid "Remove control characters from the input."
+msgstr "입력에서 제어 문자를 제거하세요."
+
+msgid "Invalid connection option."
+msgstr "연결 옵션이 올바르지 않습니다."
+
+msgid "Duplicate drive ID."
+msgstr "드라이브 ID가 중복되었습니다."
+
+msgid "Unsupported settings version."
+msgstr "지원되지 않는 설정 버전입니다."
+
+msgid "Invalid drive list."
+msgstr "드라이브 목록이 올바르지 않습니다."
+
+msgid ""
+"Saved drives could not be read. Restore a valid version 1 configuration "
+"before editing."
+msgstr "저장된 드라이브를 읽을 수 없습니다. 편집하기 전에 올바른 버전 1 설정을 복원하세요."
+
+msgid "Invalid saved configuration; refusing to overwrite it."
+msgstr "저장된 설정이 올바르지 않아 덮어쓸 수 없습니다."
+
+msgid "Settings could not be saved."
+msgstr "설정을 저장할 수 없습니다."
+
+msgid "Authentication failed. Check the username and access permissions."
+msgstr "인증에 실패했습니다. 사용자 이름과 접근 권한을 확인하세요."
+
+msgid "The server could not be found. Check its name and your network connection."
+msgstr "서버를 찾을 수 없습니다. 서버 이름과 네트워크 연결을 확인하세요."
+
+msgid "The connection timed out. Try again when the server is available."
+msgstr "연결 시간이 초과되었습니다. 서버를 사용할 수 있을 때 다시 시도하세요."
+
+msgid "The share or folder does not exist. Check the drive settings."
+msgstr "공유 또는 폴더가 없습니다. 드라이브 설정을 확인하세요."
+
+msgid ""
+"Support for this connection is unavailable. Install the GVfs network "
+"backends."
+msgstr "이 연결 방식을 사용할 수 없습니다. GVfs 네트워크 백엔드를 설치하세요."
+
+msgid "The drive is in use. Close files on the drive and try again."
+msgstr "드라이브를 사용 중입니다. 드라이브의 파일을 닫고 다시 시도하세요."
+
+msgid ""
+"The operation could not be completed. Check the server, network "
+"connection and drive settings."
+msgstr "작업을 완료할 수 없습니다. 서버, 네트워크 연결 및 드라이브 설정을 확인하세요."
+
+#, python-format
+msgid "Could not connect to %s"
+msgstr "“%s”에 연결할 수 없습니다"
+
+#, python-format
+msgid "Could not disconnect %s"
+msgstr "“%s”의 연결을 끊을 수 없습니다"
+
+msgid "Could not open Files"
+msgstr "파일 앱을 열 수 없습니다"
+

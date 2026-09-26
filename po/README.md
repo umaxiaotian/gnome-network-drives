@@ -1,6 +1,6 @@
 # Translating Network Drives
 
-The extension uses standard GNU gettext catalogs under the `network-drives` domain. English source text is the fallback; `ja.po` supplies Japanese. Translation follows the desktop locale, without changing stored drive definitions.
+The extension uses standard GNU gettext catalogs under the `network-drives` domain. English source text is the fallback; `ja.po` supplies Japanese, `ko.po` Korean and `zh_CN.po` Simplified Chinese. Translation follows the desktop locale, without changing stored drive definitions.
 
 Build dependencies: Python 3 and Babel (`python3-babel` on Ubuntu). These are not runtime dependencies.
 

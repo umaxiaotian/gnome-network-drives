@@ -10,7 +10,7 @@ Map and manage network drives directly from GNOME Shell.
 - GNOME Files integration and detection of existing connections
 - GNOME Keyring integration through the standard GVfs authentication flow
 - GTK4 / Libadwaita drive editor
-- English and Japanese UI, with gettext catalogs for additional languages
+- English, Japanese, Korean and Simplified Chinese UI, with gettext catalogs for additional languages
 - No root required; no fstab editing
 
 ## Requirements
@@ -83,7 +83,7 @@ Automatic connection starts when the extension is enabled and networking becomes
 
 ## Translations
 
-The UI follows your desktop language. Japanese is included; untranslated languages and messages fall back to English. Drive names, protocol identifiers and stored settings are never translated. GNOME/GVfs authentication dialogs use their own system translations.
+The UI follows your desktop language. Japanese, Korean and Simplified Chinese are included; untranslated languages and messages fall back to English. Drive names, protocol identifiers and stored settings are never translated. GNOME/GVfs authentication dialogs use their own system translations.
 
 Translation sources are in `po/`, with the domain `network-drives`. See [po/README.md](po/README.md) to add a language. Packaging automatically compiles `.po` files into `locale/<language>/LC_MESSAGES/network-drives.mo` and includes them in the ZIP. Runtime does not require Babel.
 

@@ -1,0 +1,221 @@
+# Chinese (Simplified, China) translations for network-drives.
+# Copyright (C) 2026 umaxiaotian
+# This file is distributed under the same license as the network-drives
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: network-drives 1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-09-27 00:01+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+msgid "Network Drives"
+msgstr "网络驱动器"
+
+msgid "Drives"
+msgstr "驱动器"
+
+msgid "Connect to shared folders on your network."
+msgstr "连接到网络上的共享文件夹。"
+
+msgid "Connect automatically"
+msgstr "自动连接"
+
+msgid "Add Network Drive"
+msgstr "添加网络驱动器"
+
+msgid "Edit Network Drive"
+msgstr "编辑网络驱动器"
+
+msgid "General"
+msgstr "常规"
+
+msgid "Connection"
+msgstr "连接"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Protocol"
+msgstr "连接协议"
+
+msgid "Server"
+msgstr "服务器"
+
+msgid "Share"
+msgstr "共享名称"
+
+msgid "Port (optional)"
+msgstr "端口（可选）"
+
+msgid "Path"
+msgstr "路径"
+
+msgid "Username (optional)"
+msgstr "用户名（可选）"
+
+msgid "Domain (optional)"
+msgstr "域（可选）"
+
+msgid "Reconnect when network becomes available"
+msgstr "网络恢复时重新连接"
+
+msgid ""
+"Passwords are requested when connecting and can be remembered by GNOME. "
+"Disconnecting a shared connection also affects Files and other saved "
+"drives using it."
+msgstr "连接时需要输入密码，也可以由 GNOME 保存密码。断开连接也会影响正在使用此连接的“文件”应用和其他驱动器。"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Port must be a number between 1 and 65535."
+msgstr "请输入 1 到 65535 之间的整数作为端口号。"
+
+msgid "This drive was deleted. Close this editor and add a new drive."
+msgstr "此驱动器已被删除。请关闭编辑界面并添加新驱动器。"
+
+msgid "Delete Network Drive"
+msgstr "删除网络驱动器"
+
+msgid "Delete Network Drive?"
+msgstr "删除网络驱动器？"
+
+#, python-format
+msgid ""
+"Remove “%s” from your saved drives? Its files and current connection will"
+" be kept."
+msgstr "要从已保存的驱动器中删除“%s”吗？文件和当前连接将保留。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Saved drives could not be read. Open settings."
+msgstr "无法读取已保存的驱动器。请打开设置。"
+
+msgid "No network drives yet"
+msgstr "尚未添加网络驱动器"
+
+msgid "Open in Files"
+msgstr "在“文件”中打开"
+
+msgid "Disconnect"
+msgstr "断开连接"
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "Manage Network Drives"
+msgstr "管理网络驱动器"
+
+msgid "Connected"
+msgstr "已连接"
+
+msgid "Disconnected"
+msgstr "未连接"
+
+msgid "Connecting…"
+msgstr "正在连接…"
+
+msgid "Connection failed"
+msgstr "连接失败"
+
+msgid "Invalid drive definition."
+msgstr "驱动器配置无效。"
+
+msgid "Invalid drive ID."
+msgstr "驱动器 ID 无效。"
+
+msgid "Enter a name (up to 120 characters)."
+msgstr "请输入名称（最多 120 个字符）。"
+
+msgid "Choose a supported protocol."
+msgstr "请选择支持的连接协议。"
+
+msgid "Enter a hostname or IPv4/IPv6 address, without a URL or path."
+msgstr "请输入主机名或 IPv4/IPv6 地址，不要包含 URL 或路径。"
+
+msgid "Enter a share name without slashes."
+msgstr "请输入不含斜杠的共享名称。"
+
+msgid "Invalid field value."
+msgstr "输入值无效。"
+
+msgid "Remove control characters from the input."
+msgstr "请移除输入中的控制字符。"
+
+msgid "Invalid connection option."
+msgstr "连接选项无效。"
+
+msgid "Duplicate drive ID."
+msgstr "驱动器 ID 重复。"
+
+msgid "Unsupported settings version."
+msgstr "不支持此设置版本。"
+
+msgid "Invalid drive list."
+msgstr "驱动器列表无效。"
+
+msgid ""
+"Saved drives could not be read. Restore a valid version 1 configuration "
+"before editing."
+msgstr "无法读取已保存的驱动器。请先恢复有效的版本 1 配置，再进行编辑。"
+
+msgid "Invalid saved configuration; refusing to overwrite it."
+msgstr "已保存的配置无效，无法覆盖。"
+
+msgid "Settings could not be saved."
+msgstr "无法保存设置。"
+
+msgid "Authentication failed. Check the username and access permissions."
+msgstr "认证失败。请检查用户名和访问权限。"
+
+msgid "The server could not be found. Check its name and your network connection."
+msgstr "找不到服务器。请检查服务器名称和网络连接。"
+
+msgid "The connection timed out. Try again when the server is available."
+msgstr "连接超时。请在服务器可用时重试。"
+
+msgid "The share or folder does not exist. Check the drive settings."
+msgstr "共享或文件夹不存在。请检查驱动器设置。"
+
+msgid ""
+"Support for this connection is unavailable. Install the GVfs network "
+"backends."
+msgstr "无法使用此连接协议。请安装 GVfs 网络后端。"
+
+msgid "The drive is in use. Close files on the drive and try again."
+msgstr "驱动器正在使用中。请关闭驱动器上的文件后重试。"
+
+msgid ""
+"The operation could not be completed. Check the server, network "
+"connection and drive settings."
+msgstr "无法完成操作。请检查服务器、网络连接和驱动器设置。"
+
+#, python-format
+msgid "Could not connect to %s"
+msgstr "无法连接到“%s”"
+
+#, python-format
+msgid "Could not disconnect %s"
+msgstr "无法断开“%s”的连接"
+
+msgid "Could not open Files"
+msgstr "无法打开“文件”"
+
