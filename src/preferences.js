@@ -8,7 +8,7 @@ import {buildUri} from './uriBuilder.js';
 
 export function fillPreferences(window, settings) {
     const store = new DriveSettings(settings);
-    window.set_default_size(650, 650);
+    window.set_default_size(760, 760);
     const page = new Adw.PreferencesPage({title: _('Network Drives'), icon_name: 'folder-remote-symbolic'});
     window.add(page);
     let group;
@@ -40,14 +40,31 @@ export function fillPreferences(window, settings) {
     const edit = existing => {
         if (editor) return;
         const draft = existing ? {...existing} : newDrive();
-        const dialog = new Adw.PreferencesDialog({title: existing ? _('Edit Network Drive') : _('Add Network Drive'), content_width: 560, content_height: 680});
+        const dialog = new Adw.Dialog({title: existing ? _('Edit Network Drive') : _('Add Network Drive'), content_width: 680, content_height: 720});
+        const toolbar = new Adw.ToolbarView();
+        dialog.set_child(toolbar);
+        const header = new Adw.HeaderBar({show_start_title_buttons: false, show_end_title_buttons: false});
+        const cancel = new Gtk.Button({label: _('Cancel')});
+        cancel.connect('clicked', () => dialog.close());
+        header.pack_start(cancel);
+        const save = new Gtk.Button({label: _('Save')});
+        save.add_css_class('suggested-action');
+        header.pack_end(save);
+        toolbar.add_top_bar(header);
+        // Actions and validation stay visible while the form scrolls on small displays.
+        const errorRow = new Gtk.Label({visible: false, wrap: true, xalign: 0,
+            margin_start: 18, margin_end: 18, margin_top: 6, margin_bottom: 6});
+        errorRow.add_css_class('error');
+        toolbar.add_top_bar(errorRow);
         editor = dialog;
         dialog.connect('closed', () => { editor = null; });
         const editorPage = new Adw.PreferencesPage();
-        dialog.add(editorPage);
+        toolbar.set_content(editorPage);
         const general = new Adw.PreferencesGroup({title: _('General')});
         const connection = new Adw.PreferencesGroup({title: _('Connection')});
-        const options = new Adw.PreferencesGroup({title: _('Options')});
+        const options = new Adw.PreferencesGroup();
+        const advanced = new Adw.ExpanderRow({title: _('Options')});
+        options.add(advanced);
         editorPage.add(general);
         editorPage.add(connection);
         editorPage.add(options);
@@ -78,15 +95,10 @@ export function fillPreferences(window, settings) {
         updateFields();
         const auto = new Adw.SwitchRow({title: _('Connect automatically'), active: draft.autoConnect});
         const reconnect = new Adw.SwitchRow({title: _('Reconnect when network becomes available'), active: draft.reconnect});
-        options.add(auto);
-        options.add(reconnect);
+        advanced.add_row(auto);
+        advanced.add_row(reconnect);
         const actions = new Adw.PreferencesGroup({description: _('Passwords are requested when connecting and can be remembered by GNOME. Disconnecting a shared connection also affects Files and other saved drives using it.')});
         editorPage.add(actions);
-        const errorRow = new Adw.ActionRow({visible: false, use_markup: false});
-        actions.add(errorRow);
-        const save = new Gtk.Button({label: _('Save'), margin_top: 12});
-        save.add_css_class('suggested-action');
-        actions.add(save);
         save.connect('clicked', () => {
             try {
                 const value = {...draft, protocol: PROTOCOLS[protocol.selected], autoConnect: auto.active, reconnect: reconnect.active};
@@ -101,7 +113,7 @@ export function fillPreferences(window, settings) {
                 store.write(existing ? current.map(d => d.id === clean.id ? clean : d) : [...current, clean]);
                 dialog.close();
             } catch (e) {
-                errorRow.title = e.message;
+                errorRow.label = e.message;
                 errorRow.visible = true;
             }
         });
@@ -121,7 +133,7 @@ export function fillPreferences(window, settings) {
                     try {
                         store.write(store.read().drives.filter(d => d.id !== existing.id));
                         dialog.close();
-                    } catch (e) { errorRow.title = e.message; errorRow.visible = true; }
+                    } catch (e) { errorRow.label = e.message; errorRow.visible = true; }
                 });
                 confirm.present(window);
             });
